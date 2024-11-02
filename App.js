@@ -19,7 +19,7 @@ const App = () => {
 
             if (route.name === 'Home') {
               iconName = focused ? 'home' : 'home-outline';
-            } else if (route.name === 'PreparationAndSafety') {
+            } else if (route.name === 'Preparation And Safety') {
               iconName = focused ? 'list' : 'list-outline';
             } else if (route.name === 'Evacuation') {
               iconName = focused ? 'alert' : 'alert-outline';
@@ -30,10 +30,10 @@ const App = () => {
           tabBarActiveTintColor:
             route.name === 'Home'
               ? '#00CED1' // Dark Turquoise for Home tab
-              : route.name === 'PreparationAndSafety'
+              : route.name === 'Preparation And Safety'
               ? '#FFD700' // Gold for Preparation and Safety tab
               : '#DC143C', // Crimson Red for Evacuation tab
-          tabBarInactiveTintColor: '#888', 
+          tabBarInactiveTintColor: '#888',
           tabBarStyle: {
             backgroundColor: '#FFFFFF',
             borderTopWidth: 0,
@@ -42,7 +42,10 @@ const App = () => {
         })}
       >
         <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="PreparationAndSafety" component={PreparationAndSafety} />
+        <Tab.Screen
+          name="Preparation And Safety" 
+          component={PreparationAndSafety} 
+        />
         <Tab.Screen name="Evacuation" component={Evacuation} />
       </Tab.Navigator>
     </NavigationContainer>
