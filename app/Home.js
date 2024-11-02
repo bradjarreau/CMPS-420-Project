@@ -8,8 +8,8 @@ const Home = ({ navigation }) => {
 
       {}
       <View style={styles.navigationButton}>
-        {/* "Next" button to navigate to the PreparationAndSafety tab */}
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('PreparationAndSafety')}>
+        {/* "Next" button to navigate to the Preparation And Safety tab */}
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Preparation And Safety')}>
           <Text style={styles.buttonText}>Next</Text>
         </TouchableOpacity>
       </View>
