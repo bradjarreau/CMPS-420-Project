@@ -9,7 +9,7 @@ const Evacuation = ({ navigation }) => {
       {}
       <View style={styles.navigationButtons}>
         {/* "Back" button to navigate to PreparationAndSafety tab */}
-        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('PreparationAndSafety')}>
+        <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Preparation And Safety')}>
           <Text style={styles.buttonText}>Back</Text>
         </TouchableOpacity>
 
