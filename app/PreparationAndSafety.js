@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import * as Progress from 'react-native-progress';
 
-const PreparationAndSafety = ({ navigation }) => {
+const PreparationAndSafety = ({ navigation }) => { 
   const [checklistItems, setChecklistItems] = useState([
     { id: 1, name: 'Batteries', checked: false },
     { id: 2, name: 'Water', checked: false },
@@ -45,7 +45,7 @@ const PreparationAndSafety = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      {/*Header with Progress Bar */}
+      {/* Header with Progress Bar */}
       <View style={styles.fixedHeader}>
         <Text style={styles.header}>Preparation & Safety Recommendations</Text>
         <Text style={styles.subheader}>Checklist of Emergency Supplies</Text>
@@ -83,10 +83,10 @@ const PreparationAndSafety = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#DFF2D8', 
+    backgroundColor: '#DFF2D8',
   },
   fixedHeader: {
-    backgroundColor: '#DFF2D8', 
+    backgroundColor: '#DFF2D8',
     paddingHorizontal: 20,
     paddingTop: 10,
     paddingBottom: 10,
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   scrollContent: {
-    paddingTop: 165, 
+    paddingTop: 165,
     paddingHorizontal: 20,
   },
   header: {
