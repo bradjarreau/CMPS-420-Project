@@ -8,11 +8,11 @@ const NOAA_TOKEN = 'irjPGkGiJAuuFUiryUdGpGYzWOEGQWMt'; // NOAA API Token
 
 const Home = ({ navigation }) => {
   const [location, setLocation] = useState(null);
-  const [windSpeed, setWindSpeed] = useState(null);//Current Wind Speed
-  const [windGust, setWindGust] = useState(null); // Wind Gusts
+  const [windSpeed, setWindSpeed] = useState(null);
+  const [windGust, setWindGust] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
   const [hurricaneInfo, setHurricaneInfo] = useState(null);
-  const [forecastPath, setForecastPath] = useState([]); // For storing path coordinates
+  const [forecastPath, setForecastPath] = useState([]);
 
   useEffect(() => {
     (async () => {
@@ -77,7 +77,7 @@ const Home = ({ navigation }) => {
           description: hurricane.properties.headline,
         });
 
-        fetchForecastPath(hurricane.geometry.coordinates); // Fetch path based on hurricane location
+        fetchForecastPath(hurricane.geometry.coordinates);
       } else {
         setHurricaneInfo({ name: 'No active hurricanes nearby.' });
       }
@@ -88,7 +88,6 @@ const Home = ({ navigation }) => {
   };
 
   const fetchForecastPath = async (centerCoordinates) => {
-  
     setForecastPath([
       { latitude: centerCoordinates[1], longitude: centerCoordinates[0] },
       { latitude: centerCoordinates[1] + 1, longitude: centerCoordinates[0] + 1 },
@@ -136,7 +135,6 @@ const Home = ({ navigation }) => {
         <Text style={styles.loadingText}>{errorMsg || 'Loading map...'}</Text>
       )}
 
-      {/* Information Boxes for Wind Speed and Hurricane Info */}
       <View style={styles.infoContainer}>
         <View style={styles.infoBox}>
           <Text style={styles.infoText}>Current Wind Speed</Text>
