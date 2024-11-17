@@ -25,7 +25,6 @@ const Evacuation = ({ navigation }) => {
      { id: 8, name: 'Covington High School', latitude: 30.4984, longitude: -90.1045 }, 
      { id: 9, name: 'Fontainebleau High School', latitude: 30.3983, longitude: -90.0656 }, 
      { id: 10, name: 'Baton Rouge River Center', latitude: 30.4465, longitude: -91.1871 }, 
-     { id: 11, name: 'Broadmoor High School', latitude: 30.4535, longitude: -91.0835 },
   ];
 
   useEffect(() => {
